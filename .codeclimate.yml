@@ -1,6 +1,6 @@
 version: "2"
 plugins:
-  grep
+  grep:
     enabled: true
     config:
       patterns:
