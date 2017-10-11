@@ -1,0 +1,17 @@
+version: "2"
+plugins:
+  grep
+    enabled: true
+    config:
+      patterns:
+        no-set-methods:
+          pattern: def set_\w+
+          annotation: "Don't define methods that start with `set_`"
+          severity: minor
+          categories: Bug Risk
+          content: >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id
+            urna eget libero fermentum bibendum. Duis dapibus, neque vel aliquet
+            tincidunt, diam eros tempor neque
+          path_patterns:
+            - "**/*.py"
